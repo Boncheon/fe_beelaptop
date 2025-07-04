@@ -26,6 +26,7 @@ import ListSeriComponent from './admin/adminSanPhamComponents/ListSeriComponent'
 import AddMauSacComponent from './admin/adminSanPhamComponents/AddMauSacComponent'
 import AddRomComponent from './admin/adminSanPhamComponents/AddRomComponent'
 import AddRamComponent from './admin/adminSanPhamComponents/AddRamComponent'
+import PhieuGiamGiaComponent from './admin/adminGiamGiaComponents/PhieuGiamGiaComponent'
 
 function App() {
   const [count, setCount] = useState()
@@ -43,8 +44,20 @@ function App() {
             {/* // Đơn hàng  */}
             <Route path='/admin/don-hang' element={<ListDonhangComponent />}></Route>
 
-            {/* // Phiếu giảm giá  */}
+            {/* // http://localhost:3000 */}
+            <Route path='/' element={<ListPhieuGiamGiaComponent />}></Route>
+
+            {/* // http://localhost:3000/admin/phieu-giam-gia */}
             <Route path='/admin/phieu-giam-gia' element={<ListPhieuGiamGiaComponent />}></Route>
+
+            {/* // http://localhost:3000/admin/add-phieu-giam-gia */}
+            <Route path='/admin/add-phieu-giam-gia' element={<PhieuGiamGiaComponent />}></Route>
+
+
+            {/* // http://localhost:3000/admin/edit-phieu-giam-gia/1 */}
+            <Route path='/admin/edit-phieu-giam-gia/:idPhieugiamgia' element={<PhieuGiamGiaComponent />}></Route>
+
+
 
             {/* // Sản phẩm */}
             <Route path='/admin/san-pham' element={<ListSanPhamComponent />}></Route>
@@ -52,15 +65,15 @@ function App() {
             <Route path='/admin/do-hoa' element={<ListDoHoaComponent />}></Route>
             {/*// http://localhost:3000/admin/add-doHoa */}
             <Route path='/admin/add-do-hoa' element={<AddDoHoaComponent />}></Route>
-             {/*// http://localhost:3000/admin/update-doHoa/1 */}
+            {/*// http://localhost:3000/admin/update-doHoa/1 */}
             <Route path='/admin/update-do-hoa/:id' element={<AddDoHoaComponent />}></Route>
 
-       
+
             {/*// http://localhost:3000/admin/cpu */}
             <Route path='/admin/cpu' element={<ListCpuComponent />}></Route>
             {/*// http://localhost:3000/admin/add-cpu */}
             <Route path='/admin/add-cpu' element={<AddCpuComponent />}></Route>
-             {/*// http://localhost:3000/admin/update-cpu/1 */}
+            {/*// http://localhost:3000/admin/update-cpu/1 */}
             <Route path='/admin/update-cpu/:id' element={<AddCpuComponent />}></Route>
 
 
@@ -73,7 +86,7 @@ function App() {
             <Route path='/admin/mau-sac' element={<ListMauSacComponent />}></Route>
 
             <Route path='/admin/add-mausac' element={<AddMauSacComponent />}></Route>
-             {/*// http://localhost:3000/admin/update-cpu/1 */}
+            {/*// http://localhost:3000/admin/update-cpu/1 */}
             <Route path='/admin/update-mausac/:id' element={<AddMauSacComponent />}></Route>
 
             <Route path='/admin/pin' element={<ListPinComponent />}></Route>
@@ -96,7 +109,7 @@ function App() {
             <Route path='/admin/khach-hang' element={<ListKhachHangComponent />}></Route>
 
             {/* // Thống Kê */}
-            
+
             {/* //http://localhost:3000 */}
             <Route path='/' element={<ListThongKeComponent />}></Route>
             <Route path='/admin/thong-ke' element={<ListThongKeComponent />}></Route>
